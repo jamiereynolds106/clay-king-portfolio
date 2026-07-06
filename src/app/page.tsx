@@ -8,12 +8,14 @@ const videos = [
   {
     id: 1,
     src: "/images/video-2.mp4",
+    poster: "/images/poster-2.jpg",
     label: "Intro",
     category: "ugc",
   },
   {
     id: 2,
     src: "/images/video-1.mp4",
+    poster: "/images/poster-1.jpg",
     label: "Health & Fitness UGC",
     category: "ugc",
   },
@@ -302,6 +304,7 @@ export default function Home() {
                       playsInline
                       loop
                       controls
+                      poster={video.poster}
                     />
                   ) : (
                     <div
