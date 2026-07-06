@@ -352,28 +352,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ═══════════ ABOUT ═══════════ */}
-        <section id="about" className="grid md:grid-cols-2">
-          <div className="min-h-[400px] md:min-h-[600px] relative overflow-hidden">
-            <Image
-              src="/images/clay-headshot-new.jpg"
-              alt="Clay King"
-              fill
-              className="object-cover"
-              style={{ objectPosition: "center top" }}
-            />
-          </div>
-
-          <div className="bg-off-white p-12 md:p-16 lg:p-20 flex flex-col justify-center">
-            <p className="text-sm tracking-[0.2em] uppercase text-steel font-semibold mb-4">
+        {/* ═══════════ ABOUT + PHOTOS ═══════════ */}
+        <section
+          id="about"
+          className="py-20 md:py-28"
+          style={{
+            background: "linear-gradient(160deg, #1a2332 0%, #0f1620 100%)",
+          }}
+        >
+          <div className="max-w-[1200px] mx-auto px-6">
+            <p className="text-sm tracking-[0.2em] uppercase text-steel-light font-medium mb-4">
               About
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-dark mb-6 leading-tight">
-              Not Your Typical
-              <br />
-              Content Creator
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Not Your Typical<br />Content Creator
             </h2>
-            <div className="space-y-4 text-text-mid leading-relaxed">
+            <div className="max-w-[700px] space-y-4 text-silver leading-relaxed text-lg font-light mb-6">
               <p>
                 At 65+, Clay King is redefining what it means to be a content
                 creator. While the industry chases youth, Clay brings something
@@ -388,8 +382,7 @@ export default function Home() {
                 with audiences across every demographic.
               </p>
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-muted">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-steel-light/70 mb-16">
               {[
                 "Authentic",
                 "Experienced",
@@ -399,27 +392,10 @@ export default function Home() {
               ].map((trait, i) => (
                 <span key={trait} className="flex items-center gap-4">
                   {trait}
-                  {i < 4 && <span className="text-border-light">/</span>}
+                  {i < 4 && <span className="text-steel-light/30">/</span>}
                 </span>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ═══════════ BEHIND THE SCENES ═══════════ */}
-        <section
-          className="py-20 md:py-28"
-          style={{
-            background: "linear-gradient(160deg, #1a2332 0%, #0f1620 100%)",
-          }}
-        >
-          <div className="max-w-[1200px] mx-auto px-6">
-            <p className="text-sm tracking-[0.2em] uppercase text-steel-light font-medium mb-4">
-              Behind the Scenes
-            </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-12 leading-tight">
-              Life in Motion
-            </h2>
 
             <div className="grid grid-cols-3 gap-4">
               <div className="aspect-square rounded-xl overflow-hidden relative">
