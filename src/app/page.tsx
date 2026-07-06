@@ -81,12 +81,12 @@ export default function Home() {
           >
             Clay King
           </a>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center gap-6 md:gap-8">
             {["Work", "About", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm font-medium tracking-[0.12em] uppercase text-text-mid hover:text-navy transition-colors"
+                className="text-xs md:text-sm font-medium tracking-[0.12em] uppercase text-text-mid hover:text-navy transition-colors"
               >
                 {item}
               </a>
@@ -111,12 +111,12 @@ export default function Home() {
             }}
           />
 
-          <div className="max-w-[1200px] mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-              <p className="font-script text-steel-light text-2xl mb-4">
+          <div className="max-w-[1200px] mx-auto px-6 pt-24 pb-16 md:py-32 grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+            <div className="order-2 md:order-1">
+              <p className="font-script text-steel-light text-xl md:text-2xl mb-4">
                 Authenticity has no age limit
               </p>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
                 Clay King
               </h1>
               <p className="text-silver text-lg md:text-xl max-w-[480px] leading-relaxed mb-8 font-light">
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
 
             {/* Hero photo */}
-            <div className="relative">
+            <div className="relative order-1 md:order-2">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-navy/50">
                 <Image
                   src="/images/clay-headshot-new.jpg"
@@ -154,11 +154,11 @@ export default function Home() {
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className={`py-12 px-6 text-center ${
-                    i < stats.length - 1 ? "border-r border-border-light" : ""
-                  }`}
+                  className={`py-8 md:py-12 px-4 md:px-6 text-center ${
+                    i % 2 === 0 ? "border-r border-border-light" : ""
+                  } ${i < 2 ? "md:border-r" : "md:border-r-0"} ${i < stats.length - 1 ? "md:border-r md:border-border-light" : ""}`}
                 >
-                  <div className="font-heading text-4xl md:text-5xl font-bold text-navy mb-2">
+                  <div className="font-heading text-3xl md:text-5xl font-bold text-navy mb-2">
                     {stat.number}
                   </div>
                   <div className="text-sm tracking-[0.12em] uppercase text-text-muted font-medium">
@@ -172,7 +172,7 @@ export default function Home() {
 
         {/* ═══════════ THE VOICE ═══════════ */}
         <section className="grid md:grid-cols-2">
-          <div className="bg-navy p-12 md:p-16 lg:p-20 flex flex-col justify-center">
+          <div className="bg-navy p-8 md:p-16 lg:p-20 flex flex-col justify-center">
             <p className="text-sm tracking-[0.2em] uppercase text-steel-light font-medium mb-6">
               The Voice
             </p>
@@ -188,7 +188,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-off-white p-12 md:p-16 lg:p-20 flex flex-col justify-center">
+          <div className="bg-off-white p-8 md:p-16 lg:p-20 flex flex-col justify-center">
             <div className="space-y-8">
               <div>
                 <p className="text-sm tracking-[0.2em] uppercase text-steel font-semibold mb-2">
@@ -285,7 +285,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {videos.map((video) => (
                 <div
                   key={video.id}
@@ -397,7 +397,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="aspect-square rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/family-group.jpg"
