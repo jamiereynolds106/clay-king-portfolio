@@ -19,6 +19,13 @@ const videos = [
     label: "Health & Fitness UGC",
     category: "ugc",
   },
+  {
+    id: 3,
+    src: "/images/video-3.mp4",
+    poster: "/images/poster-3.jpg",
+    label: "Cubed Ice UGC",
+    category: "ugc",
+  },
 ];
 
 /* ─── Stats ─── */
@@ -341,7 +348,7 @@ export default function Home() {
                 </div>
               ))}
 
-              {[3, 4].map((i) => (
+              {[4].map((i) => (
                 <div
                   key={i}
                   className="w-full aspect-[9/16] rounded-xl border-2 border-dashed border-border-light flex items-center justify-center"
