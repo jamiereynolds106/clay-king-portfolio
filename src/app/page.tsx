@@ -327,13 +327,15 @@ export default function Home() {
                       ref={(el) => {
                         videoRefs.current[video.id] = el;
                       }}
-                      src={video.src}
                       className="w-full aspect-[9/16] object-cover rounded-xl"
                       playsInline
                       loop
                       controls
+                      preload="metadata"
                       poster={video.poster}
-                    />
+                    >
+                      <source src={video.src} type="video/mp4" />
+                    </video>
                   ) : (
                     <div
                       className="w-full aspect-[9/16] rounded-xl flex items-center justify-center"
