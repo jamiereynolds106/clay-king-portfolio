@@ -23,7 +23,7 @@ const videos = [
     id: 3,
     src: "/images/video-4.mp4",
     poster: "/images/poster-4.jpg",
-    label: "Sleep UGC",
+    label: "Yana Sleep",
     category: "ugc",
   },
   {
@@ -35,20 +35,13 @@ const videos = [
   },
   {
     id: 5,
-    src: "/images/video-6.mp4",
-    poster: "/images/poster-6.jpg",
-    label: "Yana Sleep",
-    category: "ugc",
-  },
-  {
-    id: 6,
     src: "/images/video-3.mp4",
     poster: "/images/poster-3.jpg",
     label: "Cubed Ice UGC",
     category: "ugc",
   },
   {
-    id: 7,
+    id: 6,
     src: "/images/video-7.mp4",
     poster: "/images/poster-7.jpg",
     label: "Snoreanator",
