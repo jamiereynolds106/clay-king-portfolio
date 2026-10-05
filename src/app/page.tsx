@@ -47,6 +47,20 @@ const videos = [
     label: "Snoreanator",
     category: "ugc",
   },
+  {
+    id: 7,
+    src: "/images/video-8.mp4",
+    poster: "/images/poster-8.jpg",
+    label: "Coffee UGC",
+    category: "ugc",
+  },
+  {
+    id: 8,
+    src: "/images/video-9.mp4",
+    poster: "/images/poster-9.jpg",
+    label: "Fitness UGC",
+    category: "ugc",
+  },
 ];
 
 /* ─── Stats ─── */
