@@ -117,48 +117,46 @@ export default function Home() {
       <main>
         {/* ═══════════ HERO ═══════════ */}
         <section
-          className="min-h-screen flex flex-col justify-end relative overflow-hidden"
+          className="min-h-screen flex items-center relative overflow-hidden"
           style={{
             background: "linear-gradient(160deg, #2a2420 0%, #0f0d0b 100%)",
           }}
         >
-          {/* Background photo */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/clay-headshot-new.jpg"
-              alt="Clay King"
-              fill
-              className="object-cover"
-              style={{ objectPosition: "55% top", opacity: 0.45 }}
-              priority
-            />
-          </div>
+          <div className="max-w-[1400px] mx-auto px-6 pt-24 pb-16 md:py-32 grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+            <div className="order-2 md:order-1">
+              <p className="font-script text-tan-light text-3xl md:text-4xl mb-4">
+                authenticity has no age limit
+              </p>
+              <h1
+                className="font-bold text-white leading-[1.05] mb-6 tracking-[-0.02em]"
+                style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+              >
+                CLAY KING
+              </h1>
+              <p className="text-white/50 text-lg md:text-xl max-w-[480px] leading-relaxed mb-8 font-light">
+                Content creator. Storyteller. Proof that the best voices in the
+                room aren&apos;t always the youngest.
+              </p>
+              <a
+                href="#work"
+                className="inline-block bg-tan hover:bg-tan-light text-white font-semibold text-[0.72rem] tracking-[0.18em] uppercase px-8 py-4 rounded-full transition-all duration-300"
+              >
+                See My Work
+              </a>
+            </div>
 
-          {/* Gradient overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, transparent 30%, rgba(15, 13, 11, 0.85) 100%)",
-            }}
-          />
-
-          <div className="relative z-10 max-w-[1400px] mx-auto px-6 pb-16 md:pb-20 w-full">
-            <p className="font-script text-tan-light text-3xl md:text-4xl mb-4">
-              authenticity has no age limit
-            </p>
-            <h1
-              className="font-bold text-white leading-[1.05] mb-8 tracking-[-0.02em]"
-              style={{ fontSize: "clamp(3rem, 8vw, 7.5rem)" }}
-            >
-              CLAY KING
-            </h1>
-            <a
-              href="#work"
-              className="inline-block bg-tan hover:bg-tan-light text-white font-semibold text-[0.72rem] tracking-[0.18em] uppercase px-8 py-4 rounded-full transition-all duration-300"
-            >
-              See My Work
-            </a>
+            <div className="relative order-1 md:order-2">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/clay-headshot-new.jpg"
+                  alt="Clay King"
+                  fill
+                  className="object-cover"
+                  style={{ objectPosition: "55% top" }}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </section>
 
