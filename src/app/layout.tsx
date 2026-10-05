@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato, Cormorant_Garamond } from "next/font/google";
+import { Inter, Ms_Madi } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-});
-
-const cormorant = Cormorant_Garamond({
+const msMadi = Ms_Madi({
   variable: "--font-script",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["italic"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -34,10 +27,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${lato.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${inter.variable} ${msMadi.variable} h-full antialiased`}
       style={{ scrollBehavior: "smooth" }}
     >
-      <body className="min-h-full flex flex-col font-[family-name:var(--font-lato)]">
+      <body className="min-h-full flex flex-col font-[family-name:var(--font-inter)]">
         {children}
       </body>
     </html>
