@@ -61,6 +61,13 @@ const videos = [
     label: "Fitness UGC",
     category: "ugc",
   },
+  {
+    id: 9,
+    src: "/images/video-10.mp4",
+    poster: "/images/poster-10.jpg",
+    label: "Shop With Me",
+    category: "ugc",
+  },
 ];
 
 export default function Home() {
